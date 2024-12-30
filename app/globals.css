@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 60 11% 98%;
+    --foreground: 20 13% 5%;
+    --card: 60 11% 98%;
+    --card-foreground: 20 13% 5%;
+    --popover: 60 11% 98%;
+    --popover-foreground: 20 13% 5%;
+    --primary: 22 14% 55%;
+    --primary-foreground: 20 13% 5%;
+    --secondary: 47 14% 75%;
+    --secondary-foreground: 20 13% 5%;
+    --muted: 60 12% 20%;
+    --muted-foreground: 19 12% 70%;
+    --accent: 58 14% 61%;
+    --accent-foreground: 20 13% 5%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 20 13% 5%;
+    --border: 60 12% 20%;
+    --input: 60 12% 20%;
+    --ring: 58 14% 40%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 60 9% 2%;
+    --foreground: 20 12% 95%;
+    --card: 60 9% 2%;
+    --card-foreground: 20 12% 95%;
+    --popover: 60 9% 2%;
+    --popover-foreground: 20 12% 95%;
+    --primary: 21 14% 45%;
+    --primary-foreground: 60 9% 2%;
+    --secondary: 47 14% 25%;
+    --secondary-foreground: 20 12% 95%;
+    --muted: 60 10% 80%;
+    --muted-foreground: 20 12% 95%;
+    --accent: 58 14% 39%;
+    --accent-foreground: 20 12% 95%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 17 14% 10%;
+    --border: 60 9% 60%;
+    --input: 60 10% 80%;
+    --ring: 58 14% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply p-4 md:p-0 max-w-screen-lg mx-auto;
+  }
+}
