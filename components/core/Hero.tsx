@@ -46,7 +46,7 @@ const Hero = () => {
               ease: [0.65, 0, 0.35, 1],
             },
           }}
-          className="  border border-foreground/25  size-44 absolute -top-14 right-0 z-10  opacity-45 select-none pointer-events-none"
+          className="  border border-foreground/25 hidden md:block  size-44 absolute -top-14 right-0 z-10  opacity-45 select-none pointer-events-none"
         />
         <motion.div
           initial={{
@@ -83,7 +83,7 @@ const Hero = () => {
               ease: [0.25, 1, 0.5, 1],
             },
           }}
-          className=" mt-16 max-w-xl text-center text-sm relative z-20"
+          className=" mt-16 max-w-xl text-center text-xs md:text-sm relative z-20"
         >
           Achari is an open-source project that helps foreign Arabic learners
           explore the beauty of Arabic literature. Whether you&apos;re a
@@ -110,8 +110,9 @@ const Hero = () => {
         >
           Made With <span className=" px-1 text-red-500">❤︎</span> By{" "}
           <a
+            target="_blank"
             className=" opacity-75 hover:opacity-100 transition-all italic"
-            href=""
+            href="https://bmed.vercel.app/about-me"
           >
             Mohamed Rafik
           </a>
@@ -135,8 +136,9 @@ const Hero = () => {
           }}
           className=" mt-7 flex items-center gap-1"
         >
-          <Link
-            href={"/chat"}
+          <a
+            target="_blank"
+            href={"https://github.com/BounaderMedRafik/achari"}
             className={buttonVariants({
               variant: "secondary",
               size: "sm",
@@ -149,13 +151,12 @@ const Hero = () => {
                 <Github className=" fill-foreground" size={12} />
               </div>
             </div>
-          </Link>
+          </a>
           <Link
             href={"/chat"}
             className={buttonVariants({
               variant: "default",
               size: "sm",
-              className: "",
             })}
           >
             <div className="flex items-center gap-2">

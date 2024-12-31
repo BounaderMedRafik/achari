@@ -95,7 +95,7 @@ const ChatPageContent = () => {
                 Welcome to{" "}
                 <span className="font-urdu text-accent/75">أشعاري</span>
               </div>
-              <div className="text-sm mt-7">
+              <div className="md:text-sm text-xs   mt-7">
                 {"> Start A Topic To Discuss"}
                 <div>
                   {suggestions.map((item, i) => (
@@ -104,7 +104,7 @@ const ChatPageContent = () => {
                         setInputText(item);
                       }}
                       key={i}
-                      className="opacity-75 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer"
+                      className="opacity-75 line-clamp-1 md:line-clamp-none hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer"
                     >
                       {item}
                     </div>
@@ -186,7 +186,7 @@ const ChatPageContent = () => {
           </div>
         )}
       </AnimatePresence>
-      <div className="fixed bottom-14 left-1/2 -translate-x-1/2 wrapper w-full">
+      <div className="fixed bottom-14 left-1/2 -translate-x-1/2 wrapper p-0 w-full">
         <input
           placeholder="Think With Me..."
           type="text"

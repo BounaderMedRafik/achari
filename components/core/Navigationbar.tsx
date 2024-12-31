@@ -1,6 +1,6 @@
 "use client";
 
-import { Briefcase, Github, Twitter } from "lucide-react";
+import { Briefcase, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { ModeToggle } from "../ui/ModeToggle";
@@ -12,18 +12,18 @@ type navLinksType = {
 };
 const navLinks: navLinksType[] = [
   {
-    link: "Twitter",
-    href: "/",
-    icon: <Twitter className=" fill-foreground  " size={15} />,
+    link: "Linkedin",
+    href: "https://www.linkedin.com/in/bounader-med-rafik/",
+    icon: <Linkedin className=" fill-foreground  " size={15} />,
   },
   {
     link: "Github",
-    href: "/",
+    href: "https://github.com/BounaderMedRafik/",
     icon: <Github className=" fill-foreground " size={15} />,
   },
   {
     link: "Portfolio",
-    href: "/",
+    href: "https://bmed.vercel.app/",
     icon: <Briefcase className=" fill-foreground " size={15} />,
   },
 ];
@@ -40,7 +40,8 @@ const Navigationbar = () => {
         </Link>
         <div className="flex items-center">
           {navLinks.map((item, i) => (
-            <Link
+            <a
+              target={"_blank"}
               key={i}
               href={item.href}
               className={
@@ -48,7 +49,7 @@ const Navigationbar = () => {
               }
             >
               {item.icon}
-            </Link>
+            </a>
           ))}
           <ModeToggle className="fill-foreground" />
         </div>
